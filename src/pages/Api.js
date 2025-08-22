@@ -4,19 +4,31 @@ import "../App.css";
 const API = () => {
   const [apiData, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch data using async/await
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        "https://picsum.photos/v2/list?page=1&limit=100"
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setData(data);
+    } catch (err) {
+      console.error("Error fetching data:", err);
+      setError("Failed to load data");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    fetch("https://picsum.photos/v2/list?page=1&limit=100")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("API Response:", json);
-        setData(json);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching data:", err);
-        setLoading(false);
-      });
+    fetchData();
   }, []);
 
   return (
@@ -26,6 +38,8 @@ const API = () => {
         <div className="row">
           {loading ? (
             <p className="text-center">Loading...</p>
+          ) : error ? (
+            <p className="text-center text-danger">{error}</p>
           ) : apiData && apiData.length > 0 ? (
             apiData.map((item) => (
               <div className="col-md-4 col-sm-6 mb-4" key={item.id}>
