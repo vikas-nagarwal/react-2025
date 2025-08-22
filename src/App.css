@@ -607,7 +607,7 @@ li {
 }
 .rounded {
   border-radius: -12px;
-  padding: 31px;
+  /* padding: 31px; */
   background-color: aqua;
 }
 .navbar {
