@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "../App.css";
 
 export default function Navbar() {
@@ -27,22 +27,61 @@ export default function Navbar() {
         </button>
 
         {/* Menu Links */}
-        <div className={`collapse navbar-collapse ${open ? "show" : ""}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${open ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/home" className="nav-link" onClick={() => setOpen(false)}>Home</Link>
+              <Link
+                to="/home"
+                className="nav-link"
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link" onClick={() => setOpen(false)}>About</Link>
+              <Link
+                to="/about"
+                className="nav-link"
+                onClick={() => setOpen(false)}
+              >
+                About
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/service" className="nav-link" onClick={() => setOpen(false)}>Services</Link>
+              <Link
+                to="/service"
+                className="nav-link"
+                onClick={() => setOpen(false)}
+              >
+                Services
+                <ul className="service_hover">
+                  <li>website developmen </li>
+                  <li>website developmen </li>
+                  <li>website developmen </li>
+                  <li>website developmen </li>
+                </ul>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/blogs" className="nav-link" onClick={() => setOpen(false)}>Blogs</Link>
+              <Link
+                to="/blogs"
+                className="nav-link"
+                onClick={() => setOpen(false)}
+              >
+                Blogs
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" onClick={() => setOpen(false)}>Contact</Link>
+              <Link
+                to="/contact"
+                className="nav-link"
+                onClick={() => setOpen(false)}
+              >
+                contact
+              </Link>
             </li>
           </ul>
         </div>

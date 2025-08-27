@@ -680,3 +680,37 @@ li {
 .contactus h1 {
   text-align: center;
 }
+
+.navbar-nav {
+  position: relative;
+}
+.service_hover {
+  background-color: yellow;
+  margin-top: 120px;
+  display: none;
+  position: absolute;
+  /* top: 100%; */
+  /* left: 0; */
+  margin: 0; /* gap hata dega */
+  padding: 0; /* default padding bhi remove */
+  list-style: none;
+  width: max-content; /* text ke hisaab se width */
+}
+
+.service_hover li {
+  padding: 4px 6px;
+  cursor: pointer;
+  position: relative;
+
+  margin-top: 5px;
+}
+.service_hover li:hover {
+  background: orange; /* hover background color */
+  color: white; /* hover text color */
+  display: block;
+}
+
+.nav-item:hover .service_hover {
+  display: block;
+  margin-top: 11px;
+}

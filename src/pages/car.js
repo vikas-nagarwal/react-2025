@@ -24,33 +24,31 @@ const Car = () => {
         <h1 className="text-center">Carts</h1>
         <div className="row d-flex flex-wrap">
           {apiData ? (
-            apiData.carts.map((cart) =>
-              cart.products.map((product) => (
-                <div className="col-md-4 col-12 col-sm-3" key={product.id}>
-                  <div className="card shadow-sm">
-                    <div className="row">
-                      <div className="col-6">
-                        <p>id: {product.id}</p>
-                        <p>Price: ₹{product.price}</p>
-                      </div>
+            apiData.carts[0].products.slice(0, 6).map((product) => (
+              <div className="col-md-4 col-12 col-sm-3" key={product.id}>
+                <div className="card shadow-sm">
+                  <div className="row">
+                    <div className="col-6">
+                      <p>id: {product.id}</p>
+                      <p>Price: ₹{product.price}</p>
                     </div>
-
-                    <p>title{product.title}</p>
-                    <p>Price: ₹{product.quantity}</p>
-                    <p>Price: ₹{product.total}</p>
-                    <p>Price: ₹{product.discountPercentage}</p>
-                    <p>Price: ₹{product.discountedTotal}</p>
-
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      style={{ height: "150px", objectFit: "cover" }}
-                      className="card-img-top mb-2"
-                    />
                   </div>
+
+                  <p>Title: {product.title}</p>
+                  <p>Quantity: {product.quantity}</p>
+                  <p>Total: ₹{product.total}</p>
+                  <p>Discount Percentage: {product.discountPercentage}</p>
+                  <p>Discounted Total: ₹{product.discountedTotal}</p>
+
+                  <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    style={{ height: "150px", objectFit: "cover" }}
+                    className="card-img-top mb-2"
+                  />
                 </div>
-              ))
-            )
+              </div>
+            ))
           ) : (
             <p>Loading...</p>
           )}

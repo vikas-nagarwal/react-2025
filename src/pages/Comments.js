@@ -21,7 +21,7 @@ const Comments = () => {
             apiData.comments.map((comment) => (
               <div key={comment.id} className="col-4 col-md-4 mb-3">
                 <div className="p-3 border rounded">
-                  <h5>ID: {comment.id}</h5>
+                  {/* <h5>ID: {comment.id}</h5> */}
                   <p>
                     <strong>Body:</strong> {comment.body}
                   </p>
