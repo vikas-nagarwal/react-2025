@@ -58,8 +58,8 @@ export default function Navbar() {
               >
                 Services
                 <ul className="service_hover">
-                  <li>website developmen </li>
-                  <li>website developmen </li>
+                  <li>Frontend</li>
+                  <li>Backend</li>
                   <li>website developmen </li>
                   <li>website developmen </li>
                 </ul>
