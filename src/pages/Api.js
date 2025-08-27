@@ -84,7 +84,7 @@ const API = () => {
                     <p>
                       <strong>Author:</strong> {item.author}
                     </p>
-                  
+
                     <p className="text-center">
                       <a
                         className="btn btn-success btn-sm"

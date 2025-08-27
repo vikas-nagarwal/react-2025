@@ -6,6 +6,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 const Car = () => {
   const [apiData, setData] = useState(null);
 
+  // useState → API data, loading aur error handle karne ke liye.
+  // useEffect → Component mount hote hi API call hoti hai.
+  // fetch → Dummy JSON API (https://dummyjson.com/carts) se data fetch karne ke liye.
   useEffect(() => {
     fetch("https://dummyjson.com/carts")
       .then((response) => response.json())

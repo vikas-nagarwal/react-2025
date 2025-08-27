@@ -674,3 +674,9 @@ li {
 .card-img-top {
   height: 250px !important;
 }
+.contactus {
+  background-color: #0b4ee0;
+}
+.contactus h1 {
+  text-align: center;
+}

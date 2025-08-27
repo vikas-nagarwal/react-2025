@@ -3,8 +3,8 @@ import Car from "./car";
 import React from "react";
 import Button from "./Button"; // 🔁 Button component ko import kiya
 
-const About = () => {
-  const handleClick = () => {
+let About = () => {
+  let handleClick = () => {
     alert("Button clicked on Contact page!");
   };
 
