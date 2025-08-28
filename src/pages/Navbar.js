@@ -51,23 +51,48 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={() => setOpen(false)}>
-                Services
-                <ul className="service_hover">
-                  <li>
-                    {" "}
-                    <li>
-                      <Link to="/Frontend" onClick={() => setOpen(false)}>
-                        Frontend
-                      </Link>
-                    </li>
-                  </li>
-                  <li>Backend</li>
-                  <li>website developmen </li>
-                  <li>website developmen </li>
-                </ul>
-              </Link>
+              <span className="nav-link">Services</span>{" "}
+              {/* Parent link nahi banaya */}
+              <ul className="service_hover">
+                <li>
+                  <Link
+                    to="/frontend"
+                    className="nav-link"
+                    onClick={() => setOpen(true)}
+                  >
+                    Frontend
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Backend"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                  >
+                    Backend
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Website"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                  >
+                    Website Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Application"
+                    className="nav-link"
+                    onClick={() => setOpen(false)}
+                  >
+                    App Development
+                  </Link>
+                </li>
+              </ul>
             </li>
+
             <li className="nav-item">
               <Link
                 to="/blogs"

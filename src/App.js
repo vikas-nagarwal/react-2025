@@ -1,37 +1,41 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
 import Footer from "./pages/Footer";
 import About from "./pages/About";
 import Service from "./pages/Service";
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
 import Frontend from "./pages/Frontend"; // ✅ fixed path
+import Application from "./pages/Application"; // ✅ fixed path
+import Backend from "./pages/Backend"; // ✅ fixed path
+import Website from "./pages/Website"; // ✅ fixed path
 
 import "./App.css";
 
 export default function App() {
-   const routes = [
-  { path: "/", element: <Home /> },
-  { path: "/home", element: <Home /> },
-  { path: "/blogs", element: <Blogs /> },
-  { path: "/contact", element: <Contact /> },
-  { path: "/about", element: <About /> },
-  { path: "/service", element: <Service /> },
-  { path: "/frontend", element: <Frontend /> },
-  { path: "*", element: <NoPage /> }
-];
+  const routes = [
+    { path: "/", element: <Home /> },
+    { path: "/home", element: <Home /> },
+    { path: "/blogs", element: <Blogs /> },
+    { path: "/contact", element: <Contact /> },
+    { path: "/about", element: <About /> },
+    { path: "/service", element: <Service /> },
+    { path: "/Frontend", element: <Frontend /> },
+    { path: "/Application", element: <Application /> },
+    { path: "/Backend", element: <Backend /> },
+    { path: "/Website", element: <Website /> },
+  ];
 
   return (
     <BrowserRouter>
       <Navbar />
-          
-        <Routes>
-          {routes.map(({ path, element }, i) => (
-            <Route key={i} path={path} element={element} />
-          ))}
-        </Routes>
+
+      <Routes>
+        {routes.map(({ path, element }, i) => (
+          <Route key={i} path={path} element={element} />
+        ))}
+      </Routes>
 
       <Footer />
     </BrowserRouter>
