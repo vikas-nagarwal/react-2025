@@ -13,10 +13,6 @@ const Frontendapi = () => {
   }, []);
 
   return null;
-
-
-
-  
 };
 
 export default Frontendapi;
