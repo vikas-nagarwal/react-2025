@@ -51,14 +51,17 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/service"
-                className="nav-link"
-                onClick={() => setOpen(false)}
-              >
+              <Link to="/" className="nav-link" onClick={() => setOpen(false)}>
                 Services
                 <ul className="service_hover">
-                  <li>Frontend</li>
+                  <li>
+                    {" "}
+                    <li>
+                      <Link to="/Frontend" onClick={() => setOpen(false)}>
+                        Frontend
+                      </Link>
+                    </li>
+                  </li>
                   <li>Backend</li>
                   <li>website developmen </li>
                   <li>website developmen </li>
