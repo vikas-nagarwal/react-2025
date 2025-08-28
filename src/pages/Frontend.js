@@ -1,7 +1,6 @@
 import React from "react";
+import Frontendapi from "./Frontendapi";
 
-const Frontend = () => 
-
-<h1>Frontend Development</h1>;
+const Frontend = () => <Frontendapi />;
 
 export default Frontend;
