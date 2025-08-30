@@ -105,7 +105,33 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 text-center mt-3">
+            <p>
+              The client must provide written approval (such as email) upon
+              project completion. Once approved, the design, content, colors,
+              navigation, and functionality will be considered finalized. Any
+              changes after approval will incur additional charges by
+              Coderssphere.
+            </p>
+          </div>
 
+          <div className="container">
+            <div className="row">
+              <div className="col-6">
+                <p>
+                  he client must provide written approval (such as email) upon
+                  project completion. Once approved, the design, content,
+                  colors, navigation, and functionality will b
+                </p>
+              </div>
+
+              <div className="col-6">
+                <p>
+                  he client must provide written approval (such as email) upon
+                  project completion. Once approved, the design, content,
+                  colors, navigation, and functionality will b
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
