@@ -24,7 +24,7 @@ const Car = () => {
         <h1 className="text-center">Carts</h1>
         <div className="row d-flex flex-wrap">
           {apiData ? (
-            apiData.carts[0].products.slice(0, 6).map((product) => (
+            apiData.carts[0].products.slice(0, 3).map((product) => (
               <div className="col-md-4 col-12 col-sm-3" key={product.id}>
                 <div className="card shadow-sm">
                   <div className="row">

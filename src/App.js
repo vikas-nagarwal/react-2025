@@ -8,8 +8,8 @@ import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
 import Frontend from "./pages/Frontend"; // ✅ fixed path
 import Application from "./pages/Application"; // ✅ fixed path
-import Backend from "./pages/Backend"; // ✅ fixed path
 import Website from "./pages/Website"; // ✅ fixed path
+import Term_condition from "./pages/Term-condition";
 
 import "./App.css";
 
@@ -23,8 +23,8 @@ export default function App() {
     { path: "/service", element: <Service /> },
     { path: "/Frontend", element: <Frontend /> },
     { path: "/Application", element: <Application /> },
-    { path: "/Backend", element: <Backend /> },
     { path: "/Website", element: <Website /> },
+    { path: "/term-condition", element: <Term_condition /> },
   ];
 
   return (
