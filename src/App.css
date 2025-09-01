@@ -714,3 +714,6 @@ li {
   display: block;
   /* margin-top: 11px; */
 }
+.form-control {
+  width: 50px;
+}

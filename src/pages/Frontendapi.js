@@ -3,25 +3,56 @@ import React, { useEffect, useState } from "react";
 const Frontendapi = () => {
   const [data, setData] = useState([]); // API data
   const [visible, setVisible] = useState(3); // pehle 3 dikhaenge
+  const [id, setId] = useState(""); // User input for ID
+  const [filteredData, setFilteredData] = useState([]); // Filtered product by ID
 
   const showMore = () => {
-    setVisible((prev) => prev + 3); // click par aur 3 add
+    setVisible((prev) => prev + 3);
   };
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/men%27s%20clothing")
       .then((res) => res.json())
-      .then((result) => setData(result))
+      .then((json) => {
+        console.log("API Response:", json); // Console output
+        setData(json);
+        setFilteredData(json); // Initially show all products
+      })
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
+
+  const handleFilter = () => {
+    if (id === "") {
+      setFilteredData(data); // agar input empty ho to sab dikha do
+    } else {
+      const product = data.filter((item) => item.id === Number(id));
+      setFilteredData(product);
+    }
+    setVisible(3); // Reset visible count on new filter
+  };
 
   return (
     <div className="api_Data mt-5">
       <div className="container">
+        {/* Filter by ID */}
+        <div style={{ padding: "20px" }}>
+          <h2>Filter Product by ID</h2>
+          <input
+            type="number"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+            placeholder="Enter product ID"
+            className="form-control mb-2"
+          />
+          <button onClick={handleFilter} className="btn btn-primary">
+            Search
+          </button>
+        </div>
+
         <h1 className="clothesdata mb-4">Clothes Data</h1>
         <div className="row d-flex flex-wrap">
-          {data.length > 0 ? (
-            data.slice(0, visible).map((item) => (
+          {filteredData.length > 0 ? (
+            filteredData.slice(0, visible).map((item) => (
               <div className="col-md-4 col-sm-6 col-12 mb-4" key={item.id}>
                 <div className="card shadow-sm h-100">
                   <img
@@ -42,12 +73,12 @@ const Frontendapi = () => {
               </div>
             ))
           ) : (
-            <p>Loading...</p>
+            <p>No products found...</p>
           )}
         </div>
 
         {/* Load More Button */}
-        {visible < data.length && (
+        {visible < filteredData.length && (
           <div className="text-center mt-4">
             <button
               onClick={showMore}
