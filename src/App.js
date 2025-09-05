@@ -10,6 +10,7 @@ import Frontend from "./pages/Frontend"; // ✅ fixed path
 import Application from "./pages/Application"; // ✅ fixed path
 import Website from "./pages/Website"; // ✅ fixed path
 import Term_condition from "./pages/Term-condition";
+import Usestate from "./pages/Usestate"; // ✅ fixed path
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ export default function App() {
     { path: "/Application", element: <Application /> },
     { path: "/Website", element: <Website /> },
     { path: "/term-condition", element: <Term_condition /> },
+    { path: "/Usestate", element: <useState /> },
   ];
 
   return (
