@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-function usestate() {
+function Useefact() {
   const [count, setCount] = useState(0); // count = value, setCount = update
 
   return (
     <div>
       <p>Value: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increase</button>
-      <h1>use statement</h1>
+      <h1>Useeffect </h1>
     </div>
   );
 }
 
-export default usestate;
+export default Useefact;

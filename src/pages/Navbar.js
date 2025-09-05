@@ -75,12 +75,19 @@ export default function Navbar() {
                         className="nav-link"
                         onClick={() => setOpen(true)}
                       >
-                        use state
+                        UseState
                       </Link>
-                    </li>{" "}
-                    <li>use state</li>
-                    <li>use state</li>
-                    <li>use state</li>
+                    </li>
+
+                    <li>
+                      <Link
+                        to="/UseEffect"
+                        className="nav-link"
+                        onClick={() => setOpen(true)}
+                      >
+                        UseEffect
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
