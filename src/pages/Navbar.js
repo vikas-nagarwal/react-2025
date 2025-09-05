@@ -81,7 +81,7 @@ export default function Navbar() {
 
                     <li>
                       <Link
-                        to="/UseEffect"
+                        to="/Useeffect"
                         className="nav-link"
                         onClick={() => setOpen(true)}
                       >

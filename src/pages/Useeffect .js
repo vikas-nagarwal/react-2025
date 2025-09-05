@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function Useefact() {
-  const [count, setCount] = useState(0); // count = value, setCount = update
+function UseEffectDemo() {
+  const [count, setCount] = useState(0);
+
+  // useEffect ka example
+  useEffect(() => {
+    console.log("Count updated:", count);
+    document.title = `Value: ${count}`; // Browser tab ka title change karega
+  }, [count]); // dependency array -> jab count change hoga tab chalega
 
   return (
     <div>
+      <h1>useEffect Example</h1>
       <p>Value: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increase</button>
-      <h1>Useeffect </h1>
     </div>
   );
 }
 
-export default Useefact;
+export default UseEffectDemo;

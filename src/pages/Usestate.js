@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function usestate() {
+function Usestate() {
   const [count, setCount] = useState(0); // count = value, setCount = update
 
   return (
@@ -12,4 +12,4 @@ function usestate() {
   );
 }
 
-export default usestate;
+export default Usestate;
