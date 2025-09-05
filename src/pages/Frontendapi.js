@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import "../App.css";
 
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
 const Frontendapi = () => {
   const [data, setData] = useState([]); // API data
   const [visible, setVisible] = useState(3); // pehle 3 dikhaenge
@@ -35,25 +38,28 @@ const Frontendapi = () => {
     <div className="api_Data mt-5">
       <div className="container">
         {/* Filter by ID */}
-        <div style={{ padding: "20px" }}>
-          <h2>Filter Product by ID</h2>
-          <input
-            type="number"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-            placeholder="Enter product ID"
-            className="form-control mb-2"
-          />
-          <button onClick={handleFilter} className="btn btn-primary">
-            Search
-          </button>
+        <div className="col-12 text-center mb-4">
+          <div style={{ padding: "20px" }}>
+            <h2>Filter Product by ID</h2>
+            <input
+              className="center"
+              type="number"
+              value={id}
+              onChange={(e) => setId(e.target.value)}
+              placeholder="Enter product ID"
+              className="form-control mb-2"
+            />
+            <button onClick={handleFilter} className="btn btn-primary">
+              Search
+            </button>
+          </div>
         </div>
 
         <h1 className="clothesdata mb-4">Clothes Data</h1>
         <div className="row d-flex flex-wrap">
           {filteredData.length > 0 ? (
             filteredData.slice(0, visible).map((item) => (
-              <div className="col-md-4 col-sm-6 col-12 mb-4" key={item.id}>
+              <div className="col-md-3 col-sm-6 col-6 mb-4" key={item.id}>
                 <div className="card shadow-sm h-100">
                   <img
                     src={item.image}

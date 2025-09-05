@@ -63,15 +63,19 @@ export default function Navbar() {
                     Frontend
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/Backend"
-                    className="nav-link"
-                    onClick={() => setOpen(false)}
-                  >
-                    Backend
+                <li className="nav-item item-has-children">
+                  <Link to="/Backend" className="nav-link">
+                    Hook
                   </Link>
+
+                  <ul className="hooksection">
+                    <li>use state</li>
+                    <li>use state</li>
+                    <li>use state</li>
+                    <li>use state</li>
+                  </ul>
                 </li>
+
                 <li>
                   <Link
                     to="/Website"
