@@ -71,7 +71,7 @@ export default function Navbar() {
                   <ul className="hooksection">
                     <li>
                       <Link
-                        to="/userstate"
+                        to="/UseState"
                         className="nav-link"
                         onClick={() => setOpen(true)}
                       >

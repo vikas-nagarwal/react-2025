@@ -26,7 +26,7 @@ export default function App() {
     { path: "/Application", element: <Application /> },
     { path: "/Website", element: <Website /> },
     { path: "/term-condition", element: <Term_condition /> },
-    { path: "/Usestate", element: <useState /> },
+    { path: "/Usestate", element: <Usestate /> },
   ];
 
   return (
