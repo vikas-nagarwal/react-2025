@@ -13,6 +13,8 @@ import Term_condition from "./pages/Term-condition";
 import Usestate from "./pages/Usestate"; // ✅ fixed path
 import Userdata from "./pages/Userdata"; // ✅ fixed path
 import Useeffacts from "./pages/Useeffact"; // ✅ fixed path
+import Privacy from "./pages/Privacy-polocy";
+
 import "./App.css";
 export default function App() {
   const routes = [
@@ -29,6 +31,7 @@ export default function App() {
     { path: "/Usestate", element: <Usestate /> },
     { path: "/Userdata", element: <Userdata /> },
     { path: "/Useeffact", element: <Useeffacts /> },
+    {path:"/Privacy-polocy", element:<Privacy/>}
   ];
 
   return (

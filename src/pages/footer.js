@@ -33,6 +33,7 @@ const Footer = () => {
     { name: "Contact", path: "/Contact" },
     { name: "About", path: "/About" },
     { name: "Term & Condition", path: "/Term-condition" },
+    { name: "Privacy polocy", path: "/Privacy-polocy" },
   ];
 
   return (
@@ -104,7 +105,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="col-12 text-center mt-3">
+          <div className="col-12 mt-3">
             <p>
               The client must provide written approval (such as email) upon
               project completion. Once approved, the design, content, colors,
