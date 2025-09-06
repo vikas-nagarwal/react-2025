@@ -11,10 +11,9 @@ import Application from "./pages/Application"; // ✅ fixed path
 import Website from "./pages/Website"; // ✅ fixed path
 import Term_condition from "./pages/Term-condition";
 import Usestate from "./pages/Usestate"; // ✅ fixed path
-import Useefact from "./pages/Useeffect "; // ✅ fixed path
-
+import Userdata from "./pages/Userdata"; // ✅ fixed path
+import Useeffacts from "./pages/Useeffact"; // ✅ fixed path
 import "./App.css";
-
 export default function App() {
   const routes = [
     { path: "/", element: <Home /> },
@@ -28,7 +27,8 @@ export default function App() {
     { path: "/Website", element: <Website /> },
     { path: "/term-condition", element: <Term_condition /> },
     { path: "/Usestate", element: <Usestate /> },
-    { path: "/Useefact", element: <Useefact /> },
+    { path: "/Userdata", element: <Userdata /> },
+    { path: "/Useeffact", element: <Useeffacts /> },
   ];
 
   return (
