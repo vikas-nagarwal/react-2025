@@ -3,6 +3,14 @@ import React from "react";
 const Privacy = () => {
   return (
     <div className="container py-5">
+      {/* applay this type */}
+      {/* <style>{`
+        .animation {
+          color: red;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      `}</style> */}
       <h2 className="mb-4 text-center">Privacy_polocy</h2>
       <p>
         Welcome to <strong>Coderssphere</strong>. By accessing or using our
