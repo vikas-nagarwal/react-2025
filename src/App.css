@@ -834,3 +834,13 @@ input.form-control.mb-2 {
   padding: 100px 0;
   text-align: center;
 }
+.text-color {
+  color: #fcfcfc; /* blue color */
+}
+
+p {
+  color: black; /* correct syntax */
+}
+.information_section {
+  background-color: #ece9cf;
+}

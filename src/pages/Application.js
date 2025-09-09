@@ -12,7 +12,7 @@ const Application = () => {
       {/* Hero Section */}
       <section className="hero-section text-center py-5">
         <div className="container">
-          <h1 className="display-4">Application Development</h1>
+          <h1 className="display-4 text-color">Application Development</h1>
           <p className="lead my-3 text-center">
             We build mobile and web applications that empower your business.
           </p>
@@ -57,6 +57,36 @@ const Application = () => {
           </div>
         </div>
       </section>
+
+      {/* inforamtion section */}
+      <div className="information_section py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <h3>Mobile Application Development Service</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              </p>
+            </div>
+            <div className="col-6">
+              <h3>Mobile Application Development Service</h3>
+              <p>
+                Lorem ips Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sed um dolor sit amet, consectetur adipiscing elit. Sed
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* inforamtion setion end */}
     </>
   );
 };
