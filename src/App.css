@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/* @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic); */
 
+@import url(https://fonts.googleapis.com/css?family=Epunda+Sans:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 .App {
   text-align: center;
 }
@@ -17,6 +18,9 @@ ul li a {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+p {
+  font-family: "Times New Roman", Times, serif;
 }
 
 .App-header {
@@ -842,5 +846,19 @@ p {
   color: black; /* correct syntax */
 }
 .information_section {
-  background-color: #ece9cf;
+  background: linear-gradient(-45deg, #ece9cf, #f7f1e1, #ece9cf, #f7f1e1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
