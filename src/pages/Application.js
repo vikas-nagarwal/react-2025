@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaChartLine, FaChartPie, FaMobileAlt } from "react-icons/fa";
 
 const Application = () => {
   return (
@@ -91,6 +92,59 @@ const Application = () => {
         </div>
       </div>
 
+      <div className="investment-section py-5">
+        <div className="container">
+          <div className="row align-items-center">
+            {/* Left Side */}
+            <div className="col-12 col-md-6 text-light">
+              <h2 className="fw-bold">
+                Why Invest in Customized Mobile App Development?
+              </h2>
+              <p className="mt-3 text-secondary">
+                As a leading mobile app development company, IMG Global Infotech
+                delivers tailored app solutions designed to meet the unique
+                needs of businesses across industries. Our expertise spans from
+                modernizing legacy apps to building fully customized mobile apps
+                from the ground up.
+              </p>
+              <p className="text-secondary">
+                Whether you’re looking to migrate platforms, enhance user
+                experience, or integrate advanced features, our custom app
+                development services ensure your app stands out in a competitive
+                market and drives real business value.
+              </p>
+
+              {/* Stats Section */}
+              <div className="row mt-4">
+                <div className="col-4 text-center">
+                  <FaChartLine size={30} className="mb-2" />
+                  <h6>Global Market Size</h6>
+                  <h4 className="fw-bold">$330 Bn</h4>
+                </div>
+                <div className="col-4 text-center">
+                  <FaChartPie size={30} className="mb-2" />
+                  <h6>Annual CAGR</h6>
+                  <h4 className="fw-bold">14.3%</h4>
+                </div>
+                <div className="col-4 text-center">
+                  <FaMobileAlt size={30} className="mb-2" />
+                  <h6>Global App Downloads</h6>
+                  <h4 className="fw-bold">36Bn+</h4>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side */}
+            <div className="col-12 col-md-6 text-center">
+              <img
+                src="https://your-image-url.png"
+                alt="Mobile App"
+                className="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       {/* inforamtion setion end */}
     </>
   );
