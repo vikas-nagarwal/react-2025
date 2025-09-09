@@ -12,7 +12,9 @@ const Application = () => {
       {/* Hero Section */}
       <section className="hero-section text-center py-5">
         <div className="container">
-          <h1 className="display-4 text-color">Application Development</h1>
+          <h1 className="display-4 text-color">
+            Top Mobile App Development Company
+          </h1>
           <p className="lead my-3 text-center">
             We build mobile and web applications that empower your business.
           </p>
@@ -59,28 +61,31 @@ const Application = () => {
       </section>
 
       {/* inforamtion section */}
-      <div className="information_section py-5">
+      <div className="information_section py-4">
         <div className="container">
           <div className="row">
-            <div className="col-6">
-              <h3>Mobile Application Development Service</h3>
+            <div className="col-12 col-md-6">
+              <h3 style={{ marginTop: "20px" }}>
+                Top Mobile App Development Company
+              </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                Want to turn your idea into a powerful mobile app? Partner with
+                IMG Global Infotech, a leading mobile app development company,
+                to build cutting-edge, user-friendly applications that deliver
+                real value. From idea to launch, we craft high-performance
+                mobile solutions that exceed expectations, drive growth, and
+                boost your ROI.
               </p>
+              <button type="button" class="btn btn-secondary">
+                Secondary
+              </button>
             </div>
-            <div className="col-6">
-              <h3>Mobile Application Development Service</h3>
-              <p>
-                Lorem ips Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed um dolor sit amet, consectetur adipiscing elit. Sed
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              </p>
+            <div className="col-12 col-md-6">
+              <img
+                className="img-fluid imgdfd"
+                src="https://d1y41eupgbwbb2.cloudfront.net/images/mobileAppHeroImg.webp"
+                alt="Mobile App Development Company"
+              />
             </div>
           </div>
         </div>

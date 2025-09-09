@@ -862,3 +862,13 @@ p {
     background-position: 0% 50%;
   }
 }
+img.img-fluid.imgdfd {
+  padding: 20px;
+  width: 100%;
+  height: 80%;
+
+  object-fit: cover; /* image ko container ke hisaab se crop/fit karega */
+}
+.information_section {
+  padding: 40px 0; /* Top & bottom padding kam kar diya */
+}
