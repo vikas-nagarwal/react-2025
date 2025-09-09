@@ -872,3 +872,30 @@ img.img-fluid.imgdfd {
 .information_section {
   padding: 40px 0; /* Top & bottom padding kam kar diya */
 }
+
+.faq__title {
+  text-transform: uppercase;
+  color: #8b7197;
+}
+
+details {
+  background-color: #bba8c1;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px 30px;
+  margin-block: 30px;
+}
+
+summary,
+p {
+  text-align: left;
+}
+
+summary {
+  margin-inline-start: 1rem;
+  list-style-position: outside;
+}
+summary::marker {
+  color: #8b7197;
+  font-size: 18px;
+}

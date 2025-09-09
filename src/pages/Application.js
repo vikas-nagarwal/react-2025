@@ -1,15 +1,34 @@
 import { Link } from "react-router-dom";
 import { FaChartLine, FaChartPie, FaMobileAlt } from "react-icons/fa";
+import { useState } from "react";
 
 const Application = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "What are my payment options?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sint, hic consequuntur consectetur...",
+    },
+    {
+      question: "How can I invite collaborator to platform?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sint, hic consequuntur consectetur...",
+    },
+    {
+      question: "Can I upgrade my plan?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sint, hic consequuntur consectetur...",
+    },
+  ];
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
-      <div className="application developer">
-        <div className="container">
-          <div className="row"></div>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="hero-section text-center py-5">
         <div className="container">
@@ -61,7 +80,7 @@ const Application = () => {
         </div>
       </section>
 
-      {/* inforamtion section */}
+      {/* Information Section */}
       <div className="information_section py-4">
         <div className="container">
           <div className="row">
@@ -73,11 +92,9 @@ const Application = () => {
                 Want to turn your idea into a powerful mobile app? Partner with
                 IMG Global Infotech, a leading mobile app development company,
                 to build cutting-edge, user-friendly applications that deliver
-                real value. From idea to launch, we craft high-performance
-                mobile solutions that exceed expectations, drive growth, and
-                boost your ROI.
+                real value.
               </p>
-              <button type="button" class="btn btn-secondary">
+              <button type="button" className="btn btn-secondary">
                 Secondary
               </button>
             </div>
@@ -92,7 +109,8 @@ const Application = () => {
         </div>
       </div>
 
-      <div className="investment-section py-5">
+      {/* Investment Section */}
+      <div className="investment-section py-5 bg-dark">
         <div className="container">
           <div className="row align-items-center">
             {/* Left Side */}
@@ -103,15 +121,7 @@ const Application = () => {
               <p className="mt-3 text-secondary">
                 As a leading mobile app development company, IMG Global Infotech
                 delivers tailored app solutions designed to meet the unique
-                needs of businesses across industries. Our expertise spans from
-                modernizing legacy apps to building fully customized mobile apps
-                from the ground up.
-              </p>
-              <p className="text-secondary">
-                Whether you’re looking to migrate platforms, enhance user
-                experience, or integrate advanced features, our custom app
-                development services ensure your app stands out in a competitive
-                market and drives real business value.
+                needs of businesses across industries.
               </p>
 
               {/* Stats Section */}
@@ -145,7 +155,27 @@ const Application = () => {
           </div>
         </div>
       </div>
-      {/* inforamtion setion end */}
+
+      {/* FAQ Section */}
+      <div className="faq-section py-5">
+        <div className="container">
+          <h2 className="faq__title mb-4">Frequently asked questions</h2>
+          {faqs.map((faq, index) => (
+            <div key={index} className="faq-item mb-3">
+              <div
+                className="faq-question p-3 bg-light fw-bold"
+                style={{ cursor: "pointer" }}
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question}
+              </div>
+              {openIndex === index && (
+                <p className="faq-answer mt-2 p-3 border">{faq.answer}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
