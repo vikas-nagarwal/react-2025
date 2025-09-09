@@ -762,7 +762,6 @@ input.form-control.mb-2 {
 
 .text-center {
   padding: 20px;
-  background-color: aquamarine;
   text-align: center !important;
 }
 
@@ -796,4 +795,42 @@ input.form-control.mb-2 {
   to {
     background-position: 200% center;
   }
+}
+/* Center menu items in collapsed mobile navbar */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  /* Dropdown inside mobile menu */
+  .service_hover,
+  .hooksection {
+    display: block;
+    padding-left: 1rem;
+  }
+
+  .service_hover li,
+  .hooksection li {
+    margin: 0.3rem 0;
+  }
+
+  /* Make nested links full width on mobile */
+  .service_hover .nav-link,
+  .hooksection .nav-link {
+    display: block;
+    width: 100%;
+    padding-left: 1rem;
+  }
+}
+.hero-section {
+  background-image: url("/public/OIP.jpeg"); /* public folder me image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
 }

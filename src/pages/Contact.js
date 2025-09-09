@@ -26,84 +26,94 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row">
-        {/* Form Column */}
-        <div className="col-md-6 col-12 mb-4 contactus">
-          <div className="form-header mb-3">
-            <h1>Contact</h1>
+    <>
+      <div className="container mt-5">
+        <div className="row">
+          {/* Form Column */}
+          <div className="col-md-6 col-12 mb-4 contactus">
+            <div className="form-header mb-3">
+              <h1>Contact</h1>
+            </div>
+
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="fullName" className="form-label">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter your full name"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              </div>
+
+              <div className="input-group mb-3">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              </div>
+
+              <div className="input-group mb-3">
+                <label htmlFor="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What is this regarding?"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                />
+              </div>
+
+              <div className="input-group mb-3">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us more about your inquiry or feedback..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="form-control"
+                  rows={5}
+                ></textarea>
+              </div>
+
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="fullName" className="form-label">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                placeholder="Enter your full name"
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-                className="form-control"
-              />
-            </div>
-
-            <div className="input-group mb-3">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="form-control"
-              />
-            </div>
-
-            <div className="input-group mb-3">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="What is this regarding?"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="form-control"
-              />
-            </div>
-
-            <div className="input-group mb-3">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell us more about your inquiry or feedback..."
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="form-control"
-                rows={5}
-              ></textarea>
-            </div>
-
-            <div className="text-center">
-              <button type="submit" className="btn btn-primary">
-                Send Message
-              </button>
-            </div>
-          </form>
+          {/* Optional: You can add an image, map, or info in the other column */}
+          <div className="col-md-6 col-12"></div>
         </div>
-        {/* Optional: You can add an image, map, or info in the other column */}
-        <div className="col-md-6 col-12"></div>
       </div>
-    </div>
+
+      <div className="container py-4">
+        <p>
+          {" "}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </>
   );
 };
 

@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // Main navbar toggle
+  const [serviceOpen, setServiceOpen] = useState(false); // Services toggle
+  const [hookOpen, setHookOpen] = useState(false); // Hook toggle
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-warning">
       <div className="container">
         {/* Logo */}
         <Link to="/" className="navbar-brand">
-          MySite
+          <img src="./img.png" alt="MySite Logo" style={{ height: "40px" }} />
         </Link>
 
         {/* Hamburger */}
@@ -50,56 +52,65 @@ export default function Navbar() {
                 About
               </Link>
             </li>
+
+            {/* Services with mobile click */}
             <li className="nav-item">
-              <span className="nav-link">Services</span>{" "}
-              {/* Parent link nahi banaya */}
-              <ul className="service_hover">
+              <span
+                className="nav-link"
+                style={{ cursor: "pointer" }}
+                onClick={() => setServiceOpen(!serviceOpen)}
+              >
+                Services
+              </span>
+
+              <ul className={`service_hover ${serviceOpen ? "show" : ""}`}>
                 <li>
                   <Link
                     to="/frontend"
                     className="nav-link"
-                    onClick={() => setOpen(true)}
+                    onClick={() => setOpen(false)}
                   >
                     Frontend
                   </Link>
                 </li>
-                <li className="nav-item item-has-children">
-                  <Link to="/Backend" className="nav-link">
+                <li>
+                  <span
+                    className="nav-link"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setHookOpen(!hookOpen)}
+                  >
                     Hook
-                  </Link>
-
-                  <ul className="hooksection">
+                  </span>
+                  <ul className={`hooksection ${hookOpen ? "show" : ""}`}>
                     <li>
                       <Link
                         to="/UseState"
                         className="nav-link"
-                        onClick={() => setOpen(true)}
+                        onClick={() => setOpen(false)}
                       >
                         UseState
                       </Link>
                     </li>
-
                     <li>
                       <Link
-                        to="./useEffect"
+                        to="/useEffect"
                         className="nav-link"
-                        onClick={() => setOpen(true)}
+                        onClick={() => setOpen(false)}
                       >
                         UseEffect
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="./userdata"
+                        to="/userdata"
                         className="nav-link"
-                        onClick={() => setOpen(true)}
+                        onClick={() => setOpen(false)}
                       >
-                        usedata
+                        UseData
                       </Link>
                     </li>
                   </ul>
                 </li>
-
                 <li>
                   <Link
                     to="/Website"
@@ -136,7 +147,7 @@ export default function Navbar() {
                 className="nav-link"
                 onClick={() => setOpen(false)}
               >
-                contact
+                Contact
               </Link>
             </li>
           </ul>
